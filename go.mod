@@ -1,4 +1,4 @@
-module github.com/mgechev/revive
+module github.com/aaronsenecal/go-revive
 
 go 1.23.0
 
