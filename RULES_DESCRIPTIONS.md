@@ -25,6 +25,7 @@ List of all available rules.
   - [deep-exit](#deep-exit)
   - [defer](#defer)
   - [dot-imports](#dot-imports)
+  - [documented](#documented)
   - [duplicated-imports](#duplicated-imports)
   - [early-return](#early-return)
   - [empty-block](#empty-block)
@@ -339,6 +340,29 @@ Examples:
 ```toml
 [rule.dot-imports]
   arguments = [{ allowed-packages = ["github.com/onsi/ginkgo/v2","github.com/onsi/gomega"] }]
+```
+
+## documented
+
+_Description_: All functions and methods (both exported and unexported) should have documentation comments. Unlike the `exported` rule that only checks exported symbols, this rule enforces that all named functions and methods have proper documentation. Documentation comments should start with the name of the function or method being documented.
+
+This rule is more strict than the standard Go conventions but helps maintain comprehensive codebase documentation.
+
+_Configuration_: ([]string) rule flags. Available flags are:
+
+* `disableChecksOnFunctions` (`disablechecksonfunctions`, `disable-checks-on-functions`) disable checks on function declarations
+* `disableChecksOnMethods` (`disablechecksonmethods`, `disable-checks-on-methods`) disable checks on method declarations
+
+Example:
+
+```toml
+[rule.documented]
+  arguments = ["disableChecksOnFunctions"]
+```
+
+```toml
+[rule.documented]
+  arguments = ["disable-checks-on-functions"]
 ```
 
 ## duplicated-imports

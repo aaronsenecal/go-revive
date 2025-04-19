@@ -42,6 +42,7 @@ var defaultRules = []lint.Rule{
 var allRules = append([]lint.Rule{
 	&rule.ArgumentsLimitRule{},
 	&rule.CyclomaticRule{},
+	&rule.DocumentedRule{},
 	&rule.FileHeaderRule{},
 	&rule.ConfusingNamingRule{},
 	&rule.GetReturnRule{},
